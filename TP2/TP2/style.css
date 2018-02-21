@@ -1,0 +1,110 @@
+body {
+	margin:0;
+	padding:0;
+	background: url('./images/board-background.jpg');
+}
+
+#mainMenu{
+	background: #F5F500;
+	font-family: cursive;
+	font-size: 30px;
+	margin:0;
+	padding:0;
+	border-bottom: 20px solid #D3D3D3;
+}
+#mainMenu h1{
+	font-family: sans-serif;
+	float:left;
+	color: #B51515;
+	margin:5px 0 0 0;
+}
+#mainMenu h2{
+	margin:0;
+	padding:0;
+}
+#mainMenu img{
+	position:relative;
+	float:right;
+	display:inline-block;
+	padding:1%;
+	bottom:55px;
+}
+#notesContainer{
+	clear:both;
+	margin-left: 3%;
+}
+#notesContainer div{
+	background: #000000;
+	width:250px;
+	float:left;
+	color:#ffffff;
+	margin:30px 3% 0 0;
+	padding:0;
+	text-align:right;
+	font-style:italic;
+}
+p img{
+	position:absolute;
+	margin-left:-30px;
+	margin-top:-10px;
+	float:left;
+	
+
+}
+#notesContainer div:before{
+	background: #F8F800;
+	width:0;
+	float:left;
+	content:url("./images/push-pin-red.png");
+
+}
+		
+#notesContainer div p{
+	background-color: #F8F800;
+	color:#000000;
+	margin:0;
+	padding:10px 10px 10px 30px;
+	word-wrap: break-word;
+	min-height:150px;
+	max-height:250px;
+	text-align:left;
+	font-family: cursive;
+	font-style:normal;
+	text-overflow: inherit;
+	overflow: scroll;
+	overflow-x: hidden;
+	overflow-y: auto;
+	vertical-align:top;
+}
+
+#sectionForm {
+	position:absolute;
+	background-color: #F8F800;
+	padding: 1%;
+	width:25%;
+	height:35%;
+	top:20%;
+	margin-left:2%;
+	display:none;
+}	
+
+table{
+	margin:auto;
+	font-weight: bolder;
+	font-style: italic;
+	font-size: larger;
+}
+td { text-align: left; }
+td:first-child { text-align: right; }
+textarea { height: auto; }
+	
+#submissionField{
+	border: 2px solid blue;
+    width: 100%;
+    height:200%;
+    -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
+       -moz-box-sizing: border-box; /* FF1+ */
+            box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
+}
+
+

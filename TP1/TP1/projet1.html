@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title> TP1 Julien Guite-Vinet </title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<meta name="author" content="Guite, Julien">
+<meta name="description" content="Cette page contient le TP1">
+<meta name="keywords" content="travaux pratiques inf2120">
+<meta name="Robots" content="index, follow">
+
+
+<style type="text/css">
+#image {
+	text-align:center;	
+}
+#divform {
+
+	border: 2px solid blue;
+	margin-left:20%;
+	margin-right:25%;
+	padding: 1%;
+}	
+.champs {
+	border-radius:5px;
+	margin-left:10%;
+	background-color: #CCCCCC;
+	
+}
+td {
+	font-weight:lighter;
+	font-family:Times;
+	font-size:larger;
+	font-stretch:condensed;
+	width:10%;
+}
+td:first-letter {
+	font-weight: 600;
+}
+</style>
+
+<script type="text/javascript">
+var provincesEtTerritoires = [];
+provincesEtTerritoires["ON"] = {
+	nom : "Ontario",
+	capitale : "Toronto",
+	population : "13,448,494",
+	premierMinistre : "???"
+};
+provincesEtTerritoires["QC"] = {
+	nom : "Québec",
+	capitale : "Québec",
+	population : "8,164,361",
+	premierMinistre : "Philippe Couillard"
+};
+provincesEtTerritoires["NS"] = {
+	nom : "Nouvelle Écosse",
+	capitale : "Halifax",
+	population : "923,598",
+	premierMinistre : "???"
+};
+provincesEtTerritoires["NB"] = {
+	nom : "Nouveau Brunswick",
+	capitale : "Fredericton",
+	population : "747,101",
+	premierMinistre : "???"
+};
+provincesEtTerritoires["MB"] = {
+	nom : "Manitoba",
+	capitale : "Winnipeg",
+	population : "1,278,365",
+	premierMinistre : "Brian Pallister"
+};
+provincesEtTerritoires["BC"] = {
+	nom : "Colombie Britannique",
+	capitale : "Victoria",
+	population : "4,648,055",
+	premierMinistre : "???"
+};
+provincesEtTerritoires["PE"] = {
+	nom : "Ile du prince édouard",
+	capitale : "Charlottetown",
+	population : "142,907",
+	premierMinistre : "???"
+};
+provincesEtTerritoires["SK"] = {
+	nom : "Saskatchewan",
+	capitale : "Regina",
+	population : "1,098,352",
+	premierMinistre : "Brad Wall"
+};
+provincesEtTerritoires["AB"] = {
+	nom : "Alberta",
+	capitale : "Edmonton",
+	population : "4,067,175",
+	premierMinistre : "Rachel Notley"
+};
+provincesEtTerritoires["NL"] = {
+	nom : "Terre-Neuve-et-Labrador",
+	capitale : "St. John's",
+	population : "519,716",
+	premierMinistre : "???"
+};
+provincesEtTerritoires["NT"] = {
+	nom : "Territoires du Nord-Ouest",
+	capitale : "Yellowknife",
+	population : "41,786",
+	premierMinistre : "???"
+};
+provincesEtTerritoires["YT"] = {
+	nom : "Yukon",
+	capitale : "Whitehosre",
+	population : "35,874",
+	premierMinistre : "???"
+};
+provincesEtTerritoires["NU"] = {
+	nom : "Nunavut",
+	capitale : "Iqaluit",
+	population : "35,944",
+	premierMinistre : "???"
+};
+
+
+function remplirInfoProvince(codeProvince) {
+	code = codeProvince.toUpperCase();
+	if (provincesEtTerritoires[code]) {
+		document.getElementById('province').value = provincesEtTerritoires[code].nom;
+		document.getElementById('capitale').value = provincesEtTerritoires[code].capitale;
+		document.getElementById('population').value = provincesEtTerritoires[code].population;
+		document.getElementById('premierMinistre').value = provincesEtTerritoires[code].premierMinistre;
+	} else {
+		alert("Le code de la province (" + codeProvince + ") n'est pas un code valide.");
+	}
+}
+
+	
+</script>
+</head>
+
+<body>
+<div id="image"><img  src = "IMG/Canadamap.gif" alt="Map du Canada" usemap="#canadamap"></div>
+
+<map name="canadamap">
+  <area shape="poly" coords="129,176,125,259,154,261,155,231,178,202,153,179" alt="Manitoba" href="javascript:remplirInfoProvince('mb')"/>
+  <area shape="poly"coords="127,178,124,259,84,253,98,171" alt="Saskachtewan" href="javascript:remplirInfoProvince('sk')"/>
+  <area shape="poly" coords="61,163,97,173,83,254,60,248,61,232,47,206" alt="Alberta" href="javascript:remplirInfoProvince('AB')"/>
+</map>
+
+<div id="divform">
+	<table>
+		<form name="job" method="post" enctype="text/plain">
+		<tr>
+			<td>Province: </td><td><input id="province" class="champs" type="text" name="province" value="" /> </td>
+		</tr>
+		<tr>
+			<td>Capitale: </td><td><input id="capitale" class="champs" type="text" name="capitale" value="" /> </td>
+		</tr>
+		<tr>
+			<td>Population: </td><td><input id="population"  class="champs" type="text" name="population" value="" /> </td>
+		</tr>
+		<tr>
+			<td>Premier ministre:</td><td><input id="premierMinistre" class="champs" type="text" name="premierMinistre" value=""/> </td>
+		</tr>
+		
+		</form>
+	</table>
+</div>	
+	
+</body>
+</html>

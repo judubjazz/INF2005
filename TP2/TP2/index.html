@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Babillard Électronique</title>
+		<link rel="stylesheet" type="text/css" href="./style.css" />
+		<script type="text/javascript" src=./javaScript.js>	</script>
+	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	</head>
+	
+
+	<body onload="reload()">
+		
+		<div id="mainMenu">
+			<h1>Babillard</h1><h2>Électronique</h2>
+			<img id="download" src=./images/download.png />
+			<img id="newPost" onclick="afficherForm()" src=./images/new_postit.png />
+			
+		</div>
+					
+			<section id="sectionForm">
+				<table>
+					<form id="formulaire" name="job" method="post" enctype="text/plain">
+						<tr>
+							<td>Importance: </td>
+							<td>
+								f <input class="importance" type="radio" name="importance" value="" />
+								ff<input class="importance" type="radio" name="importance" value="" />
+								fff<input class="importance" type="radio" name="importance" value="" />
+							</td>							
+						</tr>
+						<tr>
+							<td>Tags: </td>
+							<td>
+								<input list="desTags" name="desTags" id="input3"/>
+								<datalist id="desTags">
+									<option name= "desOptions" value="@ÀFaire">
+								    <option name= "desOptions" value="@Suivi">
+								    <option name= "desOptions" value="@Examen">
+								</datalist>
+							 </td>
+							
+						</tr>
+						
+						<tr>
+							<td>Couleur du post-it: </td>
+							<td>
+								<SELECT id="select">
+									<OPTION>Jaune</OPTION>
+									<OPTION>Rose</OPTION>
+									<OPTION>Vert</OPTION>
+									<OPTION>Noir</OPTION>
+								</SELECT>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<textarea form ="formulaire" rows = "10" id="submissionField" value="bonjour"></textarea>
+							</td>
+						</tr>	
+						<tr>
+							<td><input type="button" onclick="effacerForm()" value="Annuler"/></td>
+							<td><input type="button" id="addButton" onclick="ajouterTag()"  value="Ajouter/Modifier"/></td>
+						</tr>					
+					</form>
+				</table>
+			</section>
+		<div id="notesContainer" >
+
+		</div>
+	</body>
+</html>
+

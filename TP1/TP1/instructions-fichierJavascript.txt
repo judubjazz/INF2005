@@ -1,0 +1,40 @@
+------------------------------
+INSTRUCTIONS: Utilisation du fichier provinces.js
+------------------------------
+
+
+1. Tout d'abord, vous devez inclure le fichier JavaScript dans l'en-tête de votre document HTML:
+ 
+	<script src="provinces.js" type="text/javascript"></script>
+
+	Note: Ici, on suppose que le fichier javascript est placé dans le même dossier que votre fichier HTML.
+	
+2. Ensuite, vous devez attribuer les identifiants (attribut id) suivants aux champs texte de votre formulaire: 
+
+Province: province
+Capitale: capitale
+Population: population
+Premier ministre: premierMinistre
+
+2. Pour pré-remplir les champs texte, vous devez appeler la fonction javascript dans les champs href de votre carte. Voici les détails: 
+	Supposons que l'on veuille remplir les champs texte après quand on clique sur le québec. Vous devez mettre comme valeur de l'attribut href ceci: 
+	
+	href="javascript:remplirInfoProvince('qc')"
+	
+	Comme vous pouvez le remarquer, le code de la province québec a été transmis par paramètre à la fonction. 
+	Il y'a un code pour chaque province et territoire:
+	
+	ON: Ontario
+	QC: Québec
+	NS: Nouvelle Écosse
+	NB: Nouveau Brunswick
+	MB: Manitoba
+	BC: Colombie Britannique
+	PE: Ile du prince édouard
+	SK: Saskatchewan
+	AB: Alberta
+	NL: Terre-Neuve-et-Labrador
+	NT: Territoires du Nord-Ouest
+	YT: Yukon
+	YT: Nunavut
+	
